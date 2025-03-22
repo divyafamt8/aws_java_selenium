@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+   runtime-version:
+    java: corretto17.x
+  build:
+   commands:
+    -echo Running Tests ....
+    -mvn clean test
+artifacts:
+  files:
+    - target/reports/**/*
+  discard-paths: yes
